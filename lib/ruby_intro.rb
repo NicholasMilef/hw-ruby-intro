@@ -40,15 +40,17 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return 'Hello, ' + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  regex = /\A[bcdfghjklmnpqrstvwxyz]/i
+  return s =~ regex
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  regex = /\A0*1+[01]*0{2,}\z/
+  return s =~ regex
 end
 
 # Part 3

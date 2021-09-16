@@ -49,8 +49,9 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  regex = /\A0*1+[01]*0{2,}\z/
-  return s =~ regex
+  regex_non_zero = /\A[01]*0{2,}\z/
+  regex_zero = /\A0+\z/
+  return s =~ regex_non_zero || s =~ regex_zero
 end
 
 # Part 3
